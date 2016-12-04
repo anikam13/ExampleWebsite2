@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<title>Coming Soon</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/w3template.css" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/mdb.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/coming-soon.css">
+<link rel="stylesheet" href="css/load.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300' rel='stylesheet' type='text/css'>
+<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.54),rgba(0, 0, 0, 0.73)),url(css/img/coming-soon-hero.jpeg);
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+</style>
+<body>
+    
+    <div id="loader-wrapper">
+			<div id="loader"></div>
+
+			<div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+
+    </div>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge">
+    <img class="logo" src="css/img/Logo.png" alt="Logo">
+  </div>
+  <div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-animate-top">COMING SOON</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    <p class="w3-large w3-center">35 days left</p>
+  </div>
+<div class="w3-display-bottomleft w3-padding-large">
+    <button onclick="goBack()" class="btn btn-4 btn-4b icon-arrow-left">Return</button>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+  </div>
+</div>
+    
+    
+<script src="js/jquery.js"></script>
+<script src="js/load.js"></script>
+<script type="text/javascript" src="js/coming-soon.js"></script>
+</body>
+</html>
+

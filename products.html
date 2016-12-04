@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<title>Product Central</title>
+	<meta name="description" content="In this tutorial, I'm going to show you how to create portfolio page with filtering and also hover effect for each of your project. We will be using a CSS3 and jQuery filter & sort plugin called MixItUp.">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="css/img/logo.png" rel="icon">
+
+    <link href="css/load.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/grayscale.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:500' rel=
+  'stylesheet' type='text/css'><!-- Bootstrap core CSS -->
+  <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet'
+  type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300' rel='stylesheet' type='text/css'>
+    <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>a
+	<![endif]-->
+    
+    <script>
+    lightbox.option({
+      'resizeDuration': 1000,
+      'wrapAround': true
+    })
+    </script>
+    
+</head>
+      
+    
+    <body>
+        
+    <div id="loader-wrapper">
+			<div id="loader"></div>
+
+			<div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+
+		</div>
+
+    <!-- Navigation -->
+   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle" data-target=".navbar-collapse"
+        data-toggle="collapse" type="button"><span class="sr-only">Toggle
+        navigation</span> <span class="icon-bar"></span> <span class=
+        "icon-bar"></span> <span class="icon-bar"></span></button>
+      </div>
+        
+    <a href="#" class="navbar-left logobox"><img src="css/img/Logo.png" class="logo"></a>
+
+
+      <div class="navbar-collapse collapse" id="navbar">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+
+
+          <li>
+            <a href="#">About</a>
+          </li>
+
+
+          <li>
+            <a href="get-involved.html">Get Involved</a>
+          </li>
+
+
+          <li class="dropdown">
+            <a aria-expanded="false" aria-haspopup="true" class=
+            "dropdown-toggle" data-toggle="dropdown" href="audio.html" role=
+            "button">Top Products <span class="caret"></span></a>
+
+            <div class="dropdown-menu" style="margin-left: 2em">
+              <ul class='list-inline'>
+                <li>
+                  <a href="audio.html">Audio</a>
+                </li>
+
+
+                <li>
+                  <a href="video.html">Video</a>
+                </li>
+
+
+                <li>
+                  <a href="battery.html">Battery</a>
+                </li>
+
+
+                <li>
+                  <a href="coming-soon.html">Accessories</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">Product Central</h1>
+                        <p class="intro-text">The newest and greatest collection of budget tech on the market.</p>
+                        <a href="#newproducts" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+        
+      
+    <div class="container">
+    <div class="row homepage">
+      <h2>Check out our collection of all the high quality tech we feature on our website!</h2>
+        
+        <hr>
+
+        <p class="long-copy">If you think we are missing any budget products you have enjoyed, feel free to leave a comment or fill out the form below to request it. </p>
+        
+    </div>
+  </div>
+    
+        <div class="container filters">
+        <div id="newproducts">
+		<ul id="filters" class="clearfix">
+			<li><span class="filter active" data-filter=".audio, .new, .video, .accessories, .other, .battery">All</span></li>
+            <li><span class="filter" data-filter=".new">New</span></li>
+            <li><span class="filter" data-filter=".audio">Audio</span></li>
+            <li><span class="filter" data-filter=".video">Video</span></li>
+            <li><span class="filter" data-filter=".battery">Battery</span></li>
+			<li><span class="filter" data-filter=".accessories">Accessories</span></li>
+            <li><span class="filter" data-filter=".other">Other</span></li>
+        </ul>
+        </div>
+        </div>
+        <!-- Images are 400X300 -->
+    
+		<div id="portfoliolist">		
+
+			<div class="portfolio video" data-cat="video">
+				<div class="portfolio-wrapper">			
+					<img src="css/img/products/Acer-R240HY.jpg" alt="Acer R240HY" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Acer R240HY ($129.99)</a>
+							<span class="text-category">Monitors</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>		
+			
+			<div class="portfolio battery" data-cat="battery">
+				<div class="portfolio-wrapper">						
+					<img src="css/img/products/aibocn.jpg" alt="Aibocn Power Bank" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Aibocn Power Bank ($10.49)</a>
+							<span class="text-category">Portable Chargers</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>				
+			
+			<div class="portfolio battery new" data-cat="battery">
+				<div class="portfolio-wrapper">			
+					<img src="css/img/products/ailun.jpg" alt="Ailun Wireless charger" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Ailun Charger($8.99)</a>
+							<span class="text-category">Wireless Chargers</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+						
+			<div class="portfolio battery" data-cat="battery">
+				<div class="portfolio-wrapper">
+					<img src="css/img/products/anker.png" alt="Anker Astro E1" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Anker Astro E1 ($14.99)</a>
+							<span class="text-category">Portable Chargers</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>			
+			
+			<div class="portfolio battery" data-cat="battery">
+				<div class="portfolio-wrapper">			
+					<img src="css/img/products/ankercable.jpg" alt="Anker 6ft Micro USB " />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Anker 6ft Micro USB ($6.99)</a>
+							<span class="text-category">Charging Cables</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+			
+			<div class="portfolio video" data-cat="video">
+				<div class="portfolio-wrapper">			
+					<img src="css/img/products/AOC-i2367fh.jpg" alt="AOC i2367fh" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">AOC i2367fh ($150.00)</a>
+							<span class="text-category">Monitors</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+            </div>																																		
+			<div class="portfolio audio" data-cat="audio">
+				<div class="portfolio-wrapper">			
+					<img src="css/img/products/ath-m40x.png" alt="Audio Technica ATH-M40x" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">ATH-M40x ($89.99)</a>
+							<span class="text-category">Audio</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>																
+			
+			<div class="portfolio battery" data-cat="battery">
+				<div class="portfolio-wrapper">			
+					<img src="css/img/products/boxlegend_battery_case.jpg" alt="BoxLegend Battery Case" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">BoxLegend Battery ($19.99)</a>
+							<span class="text-category">Battery Cases</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>							
+
+			<div class="portfolio video" data-cat="video">
+				<div class="portfolio-wrapper">						
+					<img src="css/img/products/canon.jpg" alt="Canon PowerShot " />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Canon PowerShot ($299.00)</a>
+							<span class="text-category">Cameras</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>																									
+			
+			<div class="portfolio audio" data-cat="audio">
+				<div class="portfolio-wrapper">						
+					<img src="css/img/products/charge2.jpg" alt="JBL Charge 2+" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">JBL Charge 2+ ($99.99)</a>
+							<span class="text-category">Portable Speakers</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>																	
+
+			<div class="portfolio video" data-cat="video">
+				<div class="portfolio-wrapper">
+					<img src="css/img/products/chromecast.png" alt="Google Chromecast(2015)" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Google Chromecast ($29.99)</a>
+							<span class="text-category">Media Streamers</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>																																																																
+
+			<div class="portfolio audio" data-cat="audio">
+				<div class="portfolio-wrapper">						
+					<img src="css/img/products/dknight.jpg" alt="DKnight MagicBox II" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">DKnight MagicBox II ($32.99)</a>
+							<span class="text-category">Portable Speakers</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>			
+			
+			<div class="portfolio audio" data-cat="audio">
+				<div class="portfolio-wrapper">			
+					<img src="css/img/products/edifier.jpg" alt="Edifier Exclaim e10" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Edifier Exclaim e10 ($99.00)</a>
+							<span class="text-category">Computer Speakers</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+            
+            <div class="portfolio audio" data-cat="audio">
+				<div class="portfolio-wrapper">			
+					<img src="css/img/products/ergofit.jpg" alt="Panasonic ErgoFit " />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Panasonic ErgoFit ($7.99)</a>
+							<span class="text-category">Headphones</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+            
+            <div class="portfolio video" data-cat="video">
+				<div class="portfolio-wrapper">			
+					<img src="css/img/products/firestick.jpg" alt="Amazon Firestick" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Amazon Firestick ($39.99) </a>
+							<span class="text-category">Media Streamers</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+            
+            <div class="portfolio video" data-cat="video">
+				<div class="portfolio-wrapper">			
+					<img src="css/img/products/firetablet.jpg" alt="Amazon Fire Tablet, 7" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Amazon Fire Tablet, 7" </a>
+							<span class="text-category">Tablet</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+            
+            
+            <div class="portfolio aduio" data-cat="audio">
+				<div class="portfolio-wrapper">			
+					<img src="css/img/products/gogroove.jpg" alt="GOgroove BassPulse" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">GOgroove BassPulse ($54.99)</a>
+							<span class="text-category">Computer Speakers</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+            
+            <div class="portfolio audio" data-cat="audio">
+				<div class="portfolio-wrapper">			
+					<img src="css/img/products/grado.jpg" alt="Grado Prestige Series SR80e" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Grado Prestige Series SR80e ($99.00)</a>
+							<span class="text-category">Headphones</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+            
+            <div class="portfolio battery" data-cat="battery">
+				<div class="portfolio-wrapper">			
+					<img src="css/img/products/havit.jpg" alt="HAVIT MFi 3.3ft" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">HAVIT MFi 3.3ft ($9.99) </a>
+							<span class="text-category">Cable</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+            
+            <div class="portfolio video" data-cat="video">
+				<div class="portfolio-wrapper">			
+					<img src="css/img/products/hpmonitor.png" alt="HP Pavilion 22xw Monitor" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">HP Pavilion 22xw Monitor ($121.98)</a>
+							<span class="text-category">Monitors</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+            
+            <div class="portfolio battery" data-cat="battery">
+				<div class="portfolio-wrapper">			
+					<img src="css/img/products/kmashi.jpg" alt="KMASHI 10000mAh Portable Charger" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">KMASHI 10000mAh ($10.99)</a>
+							<span class="text-category">Power Banks</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+            
+            <div class="portfolio audio" data-cat="audio">
+				<div class="portfolio-wrapper">			
+					<img src="css/img/products/logitech.jpg" alt="Logitech Z506 Surround Sound Speaker System" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Logitech Z506 Speaker System ($59.00)</a>
+							<span class="text-category">Computer Speakers</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+            
+            <div class="portfolio battery" data-cat="battery">
+				<div class="portfolio-wrapper">			
+					<img src="css/img/products/lumsing.jpg" alt="Lumsing Micro USB 6ft Premium Android Cable" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Lumsing Micro USB 6ft ($4.99)</a>
+							<span class="text-category">Cable</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+            
+            <div class="portfolio audio" data-cat="audio">
+				<div class="portfolio-wrapper">			
+					<img src="css/img/products/sony.jpg" alt="Sony MDR7506" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Sony MDR7506 ($79.99)</a>
+							<span class="text-category">Headphones</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+            
+            <div class="portfolio accessories" data-cat="accessories">
+				<div class="portfolio-wrapper">			
+					<img src="css/img/products/spigen.jpg" alt="Spigen Tough Armor Galaxy S7 Edge Case" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Spigen S7 Edge Case ($15.99)</a>
+							<span class="text-category">Case</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+            
+            <div class="portfolio accessories" data-cat="accessories">
+				<div class="portfolio-wrapper">			
+					<img src="css/img/products/tile.jpg" alt="Tile Slim ($29.99)" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Tile Slim</a>
+							<span class="text-category">Phone Finder</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+            
+            <div class="portfolio accessories" data-cat="accessories">
+				<div class="portfolio-wrapper">			
+					<img src="css/img/products/Trianium-s7.jpg" alt="Trianium Galaxy S7 edge Battery Case" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Trianium Battery ($36.99)</a>
+							<span class="text-category">Case</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+            
+            <div class="portfolio accessories" data-cat="accessories">
+				<div class="portfolio-wrapper">			
+					<img src="css/img/products/Trianium.jpg" alt="Trianium Iphone 7 Battery Case" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Trianium Battery ($49.99)</a>
+							<span class="text-category">Case</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+            
+            <div class="portfolio battery" data-cat="battery">
+				<div class="portfolio-wrapper">			
+					<img src="css/img/products/turbot.jpg" alt="Turbot Wireless Charger, 3-Coils Qi Wireless Charging Pad" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Turbot 3-Coils Pad ($20.99)</a>
+							<span class="text-category">Wireless Chargers</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+            
+            <div class="portfolio video" data-cat="video">
+				<div class="portfolio-wrapper">			
+					<img src="css/img/products/vizio%20m.jpg" alt="VIZIO M43-C1 43-Inch 4K Ultra HD Smart LED TV" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">VIZIO M43-C1 4K ($529.99)</a>
+							<span class="text-category">Televisions</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+            
+            <div class="portfolio video" data-cat="video">
+				<div class="portfolio-wrapper">			
+					<img src="css/img/products/vizio.jpg" alt="Vizio E50-C1 (50-inch) ($498)" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Vizio E50-C1 ($498)</a>
+							<span class="text-category">Television</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+            
+            <div class="portfolio accessories" data-cat="accessories">
+				<div class="portfolio-wrapper">			
+					<img src="css/img/products/caseology_iPhone7.jpg" alt="Caseology Iphone 7 Case" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Caseology Case ($15.99)</a>
+							<span class="text-category">Cases</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>			
+            
+            
+        </div>
+    
+    <div class="form container">
+    <h1>Want us to showcase a budget product you enjoy?</h1>
+      <p>Submit your product, and we might put it up for community voting or publish it directly.</p>
+     
+     <script src="https://form.jotform.com/static/feedback2.js?3.3.REV" type="text/javascript"> var JFL_62868472495169 = new JotformFeedback({ formId: '62868472495169', base: 'https://form.jotform.com/', windowTitle: 'Request Form', background: '#FFA500', fontColor: '#FFFFFF', type: 'false', height: 500, width: 700, openOnLoad: false }); </script> 
+        
+        
+      <a class="btn btn-success btn-lg lightbox-62868472495169" role="button">Request Product
+      &raquo;</a>
+        </div>
+        
+        
+
+ <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+    <script src="js/load.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script src="js/card.js"></script>
+    <script src="js/grayscale.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
